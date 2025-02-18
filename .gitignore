@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# locall testing
+local*
+*csv
+*png
+*parquet
+*zip
