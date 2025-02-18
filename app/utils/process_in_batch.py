@@ -34,9 +34,9 @@ def process_parquet_in_chunks(file_path, batch_size):
         df['friday_night'] = np.where((df["week_day"].isin(['Friday'])) & (df["hour"].isin([19, 20, 21, 22, 23])), 1, 0)
 
         summary = df.groupby(["hex_id"]).agg({"holidays": "sum", "black_friday": "sum",
-                                            "valentine": "sum", "mothers_day": "sum", "weekend": "sum",
-                                            "friday": "sum", "night": "sum", "friday_night": "sum",
-                                            "device_id": "nunique"}).reset_index()
+                                              "valentine": "sum", "mothers_day": "sum", "weekend": "sum",
+                                              "friday": "sum", "night": "sum", "friday_night": "sum",
+                                              "device_id": "nunique"}).reset_index()
         results.append(summary)
         # break
 
