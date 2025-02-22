@@ -177,3 +177,5 @@ local*
 *png
 *parquet
 *zip
+*pkl
+*geojson
