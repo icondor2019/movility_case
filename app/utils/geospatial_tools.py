@@ -41,7 +41,7 @@ class GeoSpatialTools:
             current_hex_parent = row[parent_name]
 
             # Filter possible candidates within the same hexagon
-            candidates = df[df[parent_name] == current_hex_parent]['hex_id'].tolist()
+            candidates = df[(df[parent_name] == current_hex_parent) & ~(df['missing'].isnull())]['hex_id'].tolist()
 
             # Remove itself from the candidate list
             candidates = [h for h in candidates if h != current_hex]
